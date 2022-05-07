@@ -3,10 +3,10 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { colors } from '../Styles/Colors'
 
-const ButtonCustom = () => {
+const ButtonCustom = ({onPress}) => {
     return (
-        <TouchableOpacity style= {styles.Button}>
-            <Text>Add todo</Text>
+        <TouchableOpacity style= {styles.Button} onPress= {onPress}>
+            <Text style= {styles.Text}>Add todo</Text>
         </TouchableOpacity>
     )
 }
@@ -22,4 +22,9 @@ const styles = StyleSheet.create({
     borderWidth: 0,
 
   },
+  Text: {
+    fontSize: 15,
+    alignContent: 'center',
+    color: colors.verdeOscuro,
+  }
 })
